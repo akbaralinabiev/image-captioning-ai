@@ -76,6 +76,11 @@ mark {
      color: #000;
 }
 
+::selection {
+     background-color:#ff0;
+     color: #000;
+}
+
 code,
 kbd,
 pre,

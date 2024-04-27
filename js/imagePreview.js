@@ -1,39 +1,15 @@
 function previewImage(event) {
-  const reader = new FileReader();
-  const imagePreview = document.getElementById("imagePreview");
+  var input = event.target;
+  var preview = document.getElementById("image-preview");
 
-  reader.onload = function () {
-    const img = new Image();
-    img.src = reader.result;
-    img.onload = function () {
-      const canvas = document.createElement("canvas");
-      const ctx = canvas.getContext("2d");
-      const maxWidth = 300;
-      const maxHeight = 300;
-      let width = img.width;
-      let height = img.height;
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
 
-      if (width > height) {
-        if (width > maxWidth) {
-          height *= maxWidth / width;
-          width = maxWidth;
-        }
-      } else {
-        if (height > maxHeight) {
-          width *= maxHeight / height;
-          height = maxHeight;
-        }
-      }
-
-      canvas.width = width;
-      canvas.height = height;
-      ctx.drawImage(img, 0, 0, width, height);
-      imagePreview.innerHTML = "";
-      imagePreview.appendChild(canvas);
+    reader.onload = function (e) {
+      preview.src = e.target.result;
+      preview.style.display = "block";
     };
-  };
 
-  if (event.target.files && event.target.files[0]) {
-    reader.readAsDataURL(event.target.files[0]);
+    reader.readAsDataURL(input.files[0]);
   }
 }

@@ -23,46 +23,6 @@ body {
      -moz-osx-font-smoothing: grayscale;
 }
 
-.demo-2 {
-     --color-text: #000000;
-     --color-bg: #c7c7c7;
-}
-
-/* Page Loader */
-.js .loading::before,
-.js .loading::after {
-     content: '';
-     position: fixed;
-     z-index: 1000;
-}
-
-.js .loading::before {
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: var(--color-bg);
-}
-
-.js .loading::after {
-     top: 50%;
-     left: 50%;
-     width: 60px;
-     height: 60px;
-     margin: -30px 0 0 -30px;
-     border-radius: 50%;
-     opacity: 0.4;
-     background: var(--color-link);
-     animation: loaderAnim 0.7s linear infinite alternate forwards;
-
-}
-
-@keyframes loaderAnim {
-     to {
-          opacity: 1;
-          transform: scale3d(0.5, 0.5, 1);
-     }
-}
 
 a {
      text-decoration: underline;
@@ -82,53 +42,6 @@ main {
      padding: 2rem;
 }
 
-/* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
-
-
-
-@keyframes grain {
-
-     0%,
-     100% {
-          transform: translate(0, 0);
-     }
-
-     10% {
-          transform: translate(-5%, -10%);
-     }
-
-     20% {
-          transform: translate(-15%, 5%);
-     }
-
-     30% {
-          transform: translate(7%, -25%);
-     }
-
-     40% {
-          transform: translate(-5%, 25%);
-     }
-
-     50% {
-          transform: translate(-15%, 10%);
-     }
-
-     60% {
-          transform: translate(15%, 0%);
-     }
-
-     70% {
-          transform: translate(0%, 15%);
-     }
-
-     80% {
-          transform: translate(3%, 35%);
-     }
-
-     90% {
-          transform: translate(-10%, 10%);
-     }
-}
 
 .logo {
      grid-area: logo;
@@ -175,17 +88,17 @@ main {
 }
 
 .title {
+     position: relative;
      grid-area: title;
-     font-family: dystopian, sans-serif;
      font-weight: 700;
-     font-size: 11.25vw;
+     font-size: 8vw;
      margin: 0;
      line-height: 0.9;
-     text-indent: -0.9vw;
 }
 
 .subtitle {
      grid-area: subtitle;
+     font-family: dystopian, sans-serif;
      font-size: 4vw;
      margin: 0.5rem 0 0 0;
      line-height: 1;
@@ -210,18 +123,14 @@ main {
 .content {
      margin: 0;
      font-size: 1.15rem;
-     font-size: clamp(1rem, 2vh, 3rem);
+     font-size: clamp(2rem, 2vh, 3rem);
      grid-area: content;
      padding: 2rem 0;
 }
 
-.content span {
-     clip-path: polygon(0 0, 100% 0, 100% var(--clip), 0% var(--clip));
-}
-
 .play {
      grid-area: play;
-     font-size: 12vw;
+     font-size: 15vw;
      align-self: center;
      justify-self: center;
      cursor: default;
@@ -313,4 +222,135 @@ main {
 
 .db {
      display: block;
+}
+
+
+
+
+.css-typing p {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 7.3em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 11.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 7.3em;
+  opacity: 0;
+  -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
 }

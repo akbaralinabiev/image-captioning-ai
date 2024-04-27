@@ -11,25 +11,22 @@
 	</head>
 	<body class="demo-5">
 		<main>
-			<div class="content content--fixed">
-				<header class="codrops-header">
-					<h1 class="codrops-header__title">Welcome back!</h1>
-				</header>
-			</div>
 			<div class="content">
 				<form class="form">
-					<div class="form__title">>Reset your password</div>
-                         <h3>Enter your email address associated with your account</h3>
+					<div class="form__title">>Verify your email</div>
+					<h3 id="confirmationMessage">We sent you a six digit confirmation code to <span id="emailSpan"></span>.
+						 Please enter it below to confirm your email address.</h3>
+
 					<div class="form__item">
-						<label class="form__label" for="email">Email Address</label>
-						<input class="form__input" type="email" name="email" id="email" autocomplete="off">
-						<span class="form__placeholder">Email Address</span>
+						<label class="form__label" for="email">Enter 6-digit code</label>
+						<input class="form__input" type="number" name="code" id="code" autocomplete="off" required>
+						<span class="form__placeholder">Enter 6-digit code</span>
 					</div>
 					<div class="form__item">
-						<input class="form__button" type="submit" name="reset" value="Send link">
+						<input id="confirmBtn" class="form__button" type="submit" name="reset" value="Confirm">
 					</div>
 					<div class="form__item">
-						<a class="form_link" href="./login.html">Back</a>
+						<a class="form_link-forgot" href="./forgotPassword.html">Back</a>
 					</div>
 				</button>
 				</form>
@@ -40,5 +37,7 @@
 		<script src="../js/nearby.js"></script>
 		<script src="../js/charming.min.js"></script>
 		<script src="../js/main.js"></script>
+		<script src="../js/redirectToNewPassword.js"></script>
+		<script src="../js/confirmationCode.js"></script>
 	</body>
 </html>
