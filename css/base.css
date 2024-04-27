@@ -321,6 +321,16 @@ main {
      flex-wrap: wrap;
 }
 
+.content-index {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     padding: 0;
+     min-height: 100vh;
+}
+
 .content--narrow {
      padding: 0 0 20vh;
      max-width: 900px;
