@@ -18,7 +18,7 @@ document
         flashMessage.style.color = "#CF4A4A";
 
         // Get the parent container with the class flash_form
-        const flashForm = document.querySelector(".form__item");
+        const flashForm = document.querySelector(".form_item_pass");
 
         // Insert flash message under the flash_form container
         flashForm.appendChild(flashMessage);
@@ -28,6 +28,7 @@ document
       event.preventDefault();
       return false;
     }
+        window.location.href = "../home.html";
 
     // If passwords match, allow form submission and redirect to the home page
     // (No need to explicitly redirect here, the form submission will handle it)
@@ -47,3 +48,4 @@ document.getElementById("confirmPassword").addEventListener("input", () => {
     existingFlashMessage.remove();
   }
 });
+
