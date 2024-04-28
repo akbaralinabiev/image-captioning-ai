@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Image Captioning AI</title>
-		<link rel="icon" href="../assets/logo.svg">
-		<link rel="stylesheet" type="text/css" href="../css/base.css" />
-		<link rel="stylesheet" type="text/css" href="../css/main.css" />
-		<!-- <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script> -->
-	</head>
-	<body class="demo-5">
-		<main>
-			<h1>Image Captioning AI</h1>
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image Captioning AI</title>
+    <link rel="icon" href="../assets/logo.svg" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/captioning.css" />
+  </head>
+
+  <body class="demo-5">
+    <main>
+      <div class="upload-container">
+        <div class="upload-frame">
+          <div class="upload-button-container">
+            <label for="fileInput" class="custom-upload-btn"
+              ><img src="../assets/upload.svg" alt="" />Upload Image</label
+            >
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/*"
+              onchange="previewImage(event)"
+            />
+          </div>
+		<div class="image-info" id="image-info"></div>
+	</div>
+	<div class="description-frame">
+          <div class="image-preview" id="imagePreview">
+			<img id="image-preview" src="" alt="Image Preview" style="display: none;">
+		</div>
+          <div class="caption-container">
+            <p id="imageDescription">Description will appear here...</p>
+            <div class="caption-btn-container">
+              <button class="caption-btn">Get Caption</button>
+              <a id="copyButton" class="copy-text" onclick="copyText()"
+                >copy text</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/imgPreview.js"></script>
+    <script src="../js/textCopy.js"></script>
+    <script src="../js/imageInfo.js"></script>
+  </body>
 </html>
