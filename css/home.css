@@ -10,6 +10,7 @@
 
 body {
      margin: 0;
+     position: relative;
      --color-text: #d8d8d8;
      --color-bg: #060606;
      --color-link: #fff;

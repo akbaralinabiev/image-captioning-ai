@@ -10,7 +10,15 @@
   </head>
 
   <body class="demo-5">
+    <div class="page-loader">
+      <div class="spinner"></div>
+      <div class="txt">Initializing...</div>
+    </div>
     <main>
+      <div class="header">
+        <img src="../assets/logo-reverse.svg" alt="" />
+        <h1 class="title">Image Captioning AI</h1>
+      </div>
       <div class="upload-container">
         <div class="upload-frame">
           <div class="upload-button-container">
@@ -24,12 +32,17 @@
               onchange="previewImage(event)"
             />
           </div>
-		<div class="image-info" id="image-info"></div>
-	</div>
-	<div class="description-frame">
+          <div class="image-info" id="image-info"></div>
+        </div>
+        <div class="description-frame">
           <div class="image-preview" id="imagePreview">
-			<img id="image-preview" src="" alt="Image Preview" style="display: none;">
-		</div>
+            <img
+              id="image-preview"
+              src=""
+              alt="Image Preview"
+              style="display: none"
+            />
+          </div>
           <div class="caption-container">
             <p id="imageDescription">Description will appear here...</p>
             <div class="caption-btn-container">
@@ -41,9 +54,28 @@
           </div>
         </div>
       </div>
+      <div class="back-home-div">
+        <a href="../home.html" class="form_link-forgot back-home"
+          ><img class="back-arrow" src="../assets/back.svg" alt="" />back
+          home</a
+        >
+        <a onclick="clearImage()" class="form_link-forgot clear back-home"
+          >clear <img src="../assets/Iconly-Delete-1714337985967.svg" alt=""
+        /></a>
+      </div>
     </main>
     <script src="../js/imgPreview.js"></script>
     <script src="../js/textCopy.js"></script>
     <script src="../js/imageInfo.js"></script>
+    <script src="../js/clearImg.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(window).on("load", function () {
+        setTimeout(function () {
+          $(".page-loader").fadeOut("slow");
+        }, 3000);
+      });
+    </script>
   </body>
 </html>
