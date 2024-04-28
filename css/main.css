@@ -248,3 +248,11 @@ input[type="number"]::-webkit-outer-spin-button {
      }
 }
 
+/* CSS to style the eye icon */
+.toggle-password {
+     position: absolute;
+     right: 20px;
+     top: 67%;
+     transform: translateY(-50%);
+     cursor: pointer;
+}
