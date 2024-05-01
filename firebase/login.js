@@ -31,6 +31,7 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
+
 document.getElementById("loginButton").addEventListener("click", function () {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
@@ -42,6 +43,10 @@ document.getElementById("loginButton").addEventListener("click", function () {
       const user = userCredential.user;
       console.log("Success! Logged in.");
       showToast("Success! Logged in.");
+
+      // Store user email in localStorage
+      localStorage.setItem("userEmail", user.email);
+
       // Redirect to home.html after successful login
       window.location.href = "../home.html";
     })
@@ -56,6 +61,6 @@ document.getElementById("loginButton").addEventListener("click", function () {
         showToast(errorMessage, true);
       }
     });
-
-
 });
+
+

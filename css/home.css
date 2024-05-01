@@ -70,8 +70,10 @@ main {
 }
 
 .links {
+     display: flex;
      grid-area: links;
      padding-top: 1rem;
+     justify-content: center;
 }
 
 .demos div:not(:first-child),
@@ -744,3 +746,44 @@ Style class utilities .oh {
      -webkit-animation-timing-function: ease-in-out;
      visibility: visible !important;
 }
+
+.userEmail {
+     margin-left: 10px;
+     padding: 3px 10px;
+     border: 1px solid #ffffff;
+     width: fit-content;
+     height: fit-content;
+     user-select: none;
+}
+
+.userEmail:hover {
+     background-color: #fff;
+     color: #000;
+     cursor: pointer;
+     font-weight: bold;
+}
+
+.logout {
+     cursor: pointer;
+     /* padding: 3px 10px; */
+}
+
+.logout-dropdown {
+     position: relative;
+}
+
+#logoutButton {
+     position: absolute;
+     bottom: -20px;
+     /* Adjust this value as needed */
+     right: 0;
+}
+
+.userEmail img {
+     transition: transform 0.3s ease;
+}
+
+.logoutDropdown.open~.userEmail img {
+     transform: rotate(180deg);
+}
+

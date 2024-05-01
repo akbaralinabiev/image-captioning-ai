@@ -30,3 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Add event listener to the logout button
+		const userEmailDisplay = document.getElementById("userEmailDisplay");
+		const logoutDropdown = document.getElementById("logoutDropdown");
+		const logoutButton = document.getElementById("logoutButton");
+
+		// Add event listener to the email display
+		userEmailDisplay.addEventListener("click", () => {
+			// Toggle visibility of the logout dropdown
+			logoutDropdown.style.display = (logoutDropdown.style.display === "block") ? "none" : "block";
+		});
+
+		// Add event listener to the logout button
+		logoutButton.addEventListener("click", () => {
+			// Redirect to the index file or perform sign-out operation
+			window.location.href = "../index.html"; // Or your sign-out logic
+		});

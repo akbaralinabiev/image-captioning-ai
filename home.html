@@ -39,9 +39,18 @@
 		</h2>
 
 		<nav class="links line line--vertical">
-			<div class="dib oh"><a href="./auth/login.html" class="dib">Login</a></div>
-			<div class="dib oh"><a href="./auth/register.html" class="dib">Register</a></div>
+			<div id="loginLink" class="dib oh"><a href="./auth/login.html" class="dib">Login</a></div>
+			<div id="registerLink" class="dib oh"><a href="./auth/register.html" class="dib">Register</a></div>
+
+			<div class="logout-dropdown">
+				<div id="userEmailDisplay" class="dib oh userEmail" style="display: none;"></div>
+				<div id="logoutDropdown" class="dib oh logoutDropdown" style="display: none;">
+					<div id="logoutButton" class="dib oh logout" style="display: none;"><a>Log out</a></div>
+				</div>
+			</div>
+
 		</nav>
+
 		<div class="menu line line--vertical">
 			<div class="menu__inner">
 				<div class="oh">
@@ -89,15 +98,15 @@
 			<div>2024</div>
 		</div>
 	</main>
-	<script>
-
-
-	</script>
 
 	<script src="./js/imagePreview.js"></script>
 	<script src="./js/base.js"></script>
 	<script src="./js/loading.js"></script>
+	<script src="./firebase/login.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+	<script src="./firebase/register.js"></script>
+	<script src="./js/userEmailStorage.js"></script>
 
 	<body>
-
 </html>
