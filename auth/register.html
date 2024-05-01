@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ !DOCTYPE html>
 <html lang="en" class="no-js">
 
 <head>
@@ -12,6 +12,7 @@
 </head>
 
 <body class="demo-5">
+	
 	<main>
 		<div class="content content--fixed">
 			<header class="codrops-header">
@@ -19,34 +20,32 @@
 			</header>
 		</div>
 		<div class="content">
-			<form class="form">
-				<a class="" href="../index.html" aria-label="Wave logo homepage"><img src="../assets/logo.svg"
-						alt=""></a>
-				<div class="form__title">> Create an account</div>
-				<div class="form__item">	
-					<label class="form__label" for="firstname">Full Name</label>
-					<input class="form__input" type="text" name="firstname" id="firstname" autocomplete="off">
+			<form class="form" id="registerForm">
+				<div class="form__title">Create an account</div>
+				<div class="form__item">
+					<label class="form__label" for="fullname">Full Name</label>
+					<input class="form__input" type="text" name="fullname" id="fullname" autocomplete="off">
 					<span class="form__placeholder">Full Name</span>
 				</div>
 				<div class="form__item">
 					<label class="form__label" for="email">Email Address</label>
 					<input class="form__input" type="email" name="email" id="email" autocomplete="off">
 					<span class="form__placeholder">Email Address</span>
+					<div id="toastMessage" class="toast-message"></div>
 				</div>
 				<div class="form__item">
-					<label class="form__label" for="lastname">Password</label>
-					<input class="form__input password-input" type="Password" name="password" id="password" autocomplete="off" maxlength="20">
+					<label class="form__label" for="password">Password</label>
+					<input class="form__input password-input" type="password" name="password" id="password"
+						autocomplete="off" maxlength="20">
 					<span class="form__placeholder">Password</span>
 					<span id="toggle-password" class="toggle-password">
-               			<img src="../assets/eye.svg" alt="">
-            			</span>
+						<img src="../assets/eye.svg" alt="">
+					</span>
 				</div>
-
 				<div class="form__item form_item_buttons">
 					<a class="form_link" href="./login.html">Login</a>
-					<input class="form__button" type="submit" name="register" value="sign up">
+					<button id="registerButton" class="form__button" type="button">Sign up</button>
 				</div>
-				</button>
 			</form>
 		</div>
 	</main>
@@ -56,6 +55,9 @@
 	<script src="../js/charming.min.js"></script>
 	<script src="../js/main.js"></script>
 	<script src="../js/showPassword.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+	<script src="../firebase/register.js"></script>
 </body>
 
 </html>

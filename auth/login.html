@@ -30,12 +30,13 @@
 						<input class="form__input" type="password" name="password" id="password" autocomplete="off" required>
 						<span class="form__placeholder">Password</span>
 						<span id="toggle-password" class="toggle-password">
-               				<img src="../assets/eye.svg" alt="">
-            				</span>
+							<img src="../assets/eye.svg" alt="">
+						</span>
 					</div>
+					<div id="toastMessage" class="toast-message"></div>
 					<div class="form__item form_item_buttons">
 						<a class="form_link" href="./register.html">Register</a>
-						<input class="form__button" type="submit" name="register" value="login">
+						<button id="loginButton" class="form__button" type="button">Login</button>
 					</div>
 					<div class="form__item">
 						<a href="./forgotPassword.html" class="form_link-forgot">forgot password?</a>
@@ -49,5 +50,8 @@
 		<script src="../js/charming.min.js"></script>
 		<script src="../js/main.js"></script>
 		<script src="../js/showPassword.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+		<script src="../firebase/login.js"></script>
 	</body>
 </html>
