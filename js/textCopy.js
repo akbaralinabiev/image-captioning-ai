@@ -1,30 +1,30 @@
 function copyText() {
-  // Select the text to copy
-  const textToCopy = "Text you want to copy";
+  // Get the description element
+  const descriptionElement = document.getElementById("imageDescription");
 
-  // Create a temporary textarea element
-  const textarea = document.createElement("textarea");
-  textarea.value = textToCopy;
+  // Get the text content of the description
+  const textToCopy = descriptionElement.textContent.trim();
 
-  // Append the textarea to the body
-  document.body.appendChild(textarea);
+  // Check if the description is not empty
+  if (textToCopy !== "") {
+    // Create a temporary textarea element
+    const textarea = document.createElement("textarea");
+    textarea.value = textToCopy;
 
-  // Select the text in the textarea
-  textarea.select();
-  textarea.setSelectionRange(0, 99999); // For mobile devices
+    document.body.appendChild(textarea);
 
-  // Copy the selected text to the clipboard
-  document.execCommand("copy");
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
 
-  // Remove the temporary textarea
-  document.body.removeChild(textarea);
+    document.execCommand("copy");
 
-  // Change button text to "Text Copied!" for 2 seconds
-  const copyButton = document.getElementById("copyButton");
-  copyButton.textContent = "Text Copied!";
+    document.body.removeChild(textarea);
 
-  setTimeout(function () {
-    // Revert back to original text after 2 seconds
-    copyButton.textContent = "copy text";
-  }, 2000);
+    const copyButton = document.getElementById("copyButton");
+    copyButton.textContent = "Text Copied!";
+
+    setTimeout(function () {
+      copyButton.textContent = "copy text";
+    }, 2000);
+  }
 }

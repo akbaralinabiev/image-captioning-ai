@@ -20,16 +20,11 @@
   );
 }
 
-
-
-
-
 // Redirect to the captioning.html page
 document.addEventListener("DOMContentLoaded", function () {
   const playButton = document.querySelector(".play");
 
   playButton.addEventListener("click", function () {
-    // Redirect to the captioning.html page
     window.location.href = "./pages/captioning.html";
   });
 });

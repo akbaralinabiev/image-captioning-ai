@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   const email = urlParams.get("email");
 
-  // Display the email address in the desired location
+  // Display the email address in the confirmation message
   const emailSpan = document.getElementById("emailSpan");
   if (emailSpan) {
     emailSpan.textContent = email;
