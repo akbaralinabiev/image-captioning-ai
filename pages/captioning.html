@@ -32,6 +32,13 @@
       <img src="../assets/logo-reverse.svg" alt="" />
       <h1 class="title">Image Captioning AI</h1>
     </div>
+    <div class="back-home-div">
+      <a href="../home.html" class="form_link-forgot back-home"><img class="back-arrow" src="../assets/back.svg"
+          alt="" />back
+        home</a>
+      <a onclick="clearImage()" class="form_link-forgot clear back-home">clear <img
+          src="../assets/Iconly-Delete-1714337985967.svg" alt="" /></a>
+    </div>
     <div class="upload-container">
       <div class="upload-frame">
         <div class="upload-button-container">
@@ -44,6 +51,10 @@
         <div class="image-preview" id="imagePreview">
           <img id="image-preview" src="" alt="Image Preview" style="display: none" />
         </div>
+        <div class="modal" id="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage">
+        </div>
         <div class="caption-container">
           <p id="imageDescription">Description will appear here...</p>
           <div class="caption-btn-container">
@@ -53,20 +64,13 @@
         </div>
       </div>
     </div>
-    <div class="back-home-div">
-      <a href="../home.html" class="form_link-forgot back-home"><img class="back-arrow" src="../assets/back.svg"
-          alt="" />back
-        home</a>
-      <a onclick="clearImage()" class="form_link-forgot clear back-home">clear <img
-          src="../assets/Iconly-Delete-1714337985967.svg" alt="" /></a>
-    </div>
   </main>
   <script src="../js/imgPreview.js"></script>
   <script src="../js/textCopy.js"></script>
   <script src="../js/imageInfo.js"></script>
   <script src="../js/clearImg.js"></script>
   <script src="../js/loading.js"></script>
-
+  <script src="../js/modal.js"></script>
 </body>
 
 </html>
