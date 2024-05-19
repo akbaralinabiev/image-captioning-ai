@@ -7,4 +7,6 @@ function clearImage() {
   imageInfo.innerHTML = "";
   // Clear file input
   document.getElementById("fileInput").value = "";
+   document.getElementById("imageDescription").textContent =
+     "Description will appear here...";
 }

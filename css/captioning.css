@@ -32,9 +32,13 @@ input[type="file"] {
      margin-bottom: 30px;
 }
 
+.header img {
+     width: 50px;
+}
+
 .title {
      color: #fff;
-     font-size: 2rem;
+     font-size: 1.5rem;
 }
 
 .upload-container {
@@ -126,13 +130,18 @@ input[type="file"] {
 #imageDescription {
      width: auto;
      height: 100%;
-     color: #5a5a5a;
+     /* color: #5a5a5a; */
+     color: #fff;
      font-size: 18px;
      font-weight: 500;
      margin: 0;
      outline: 1px solid #353535;
      padding: 1rem;
      border-radius: 10px;
+}
+
+.placeholder {
+     color: #5a5a5a;
 }
 
 .caption-container {
@@ -168,6 +177,7 @@ input[type="file"] {
 
 .caption-btn-container {
      display: flex;
+     align-items: center;
      flex-direction: row;
      gap: 20px;
 }
@@ -577,7 +587,6 @@ p {
 }
 
 /* Style modal content */
-/* Style modal content */
 .modal-content {
      position: absolute;
      top: 50%;
@@ -603,3 +612,4 @@ p {
 .image-preview {
      cursor: pointer;
 }
+
