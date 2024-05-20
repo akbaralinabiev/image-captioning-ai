@@ -1,36 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   document
-//     .getElementById("generateCaptionBtn")
-//     .addEventListener("click", function () {
-//       var fileInput = document.getElementById("fileInput");
-//       var file = fileInput.files[0];
-//       var formData = new FormData();
-//       formData.append("image", file);
-
-//       fetch("http://127.0.0.1:5000/caption", {
-//         method: "POST",
-//         body: formData,
-//       })
-//         .then((response) => {
-//           if (!response.ok) {
-//             throw new Error(
-//               "Network response was not ok " + response.statusText
-//             );
-//           }
-//           return response.json();
-//         })
-//         .then((data) => {
-//           document.getElementById("imageDescription").textContent =
-//             data.caption;
-
-//           document.getElementById("imageDescription").textContent = "";
-//         })
-//         .catch((error) => {
-//           console.error("Error:", error);
-//         });
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("generateCaptionBtn")
