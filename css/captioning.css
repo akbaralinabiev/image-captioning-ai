@@ -77,7 +77,6 @@ input[type="file"] {
      border: none;
      border-radius: 5px;
      cursor: pointer;
-     /* max-width: fit-content; */
      transition: background-color 0.3s;
 }
 
